@@ -20,17 +20,21 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 
 
 ... # Your code here
-tina.begin_fill()
-tina.color('red')
-tina.circle(100)
-tina.end_fill()
-tina.penup()
-tina.goto(-300,0)
-tina.pendown()
-tina.begin_fill()
-tina.color('blue')
-tina.circle(100)
-tina.end_fill()
+screen = turtle.Screen()
+screen.setup(width=600, height=600)
+tina.speed(3)
+
+
+def set_turtle_image(turtle, image_name):
+    """pikachu"""
+
+    from pathlib import Path
+    image_dir = Path(__file__).parent / ""
+    image_path = str(image_dir / image_name)
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    turtle.shape(image_path)
 turtle.exitonclick()                    # Close the window when we click on it
 
 
