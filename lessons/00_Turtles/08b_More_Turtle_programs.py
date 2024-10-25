@@ -27,7 +27,7 @@ t = turtle.Turtle()
 set_turtle_image(t, "pikachu.gif")
 
 t.penup()
-t.speed(999)
+t.speed(5)
 
 for i in range(100):
     t.goto(200, 200)
